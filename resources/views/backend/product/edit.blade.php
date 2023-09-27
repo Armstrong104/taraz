@@ -38,7 +38,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Description</label>
-                        <textarea name="desc" rows="3" class="form-control">{{$product->desc}}"</textarea>
+                        <textarea name="desc" rows="3" class="form-control">{{$product->desc}}</textarea>
                     </div>
                     <div class="mb-3">
                         <img src="{{asset($product->image)}}" alt="" height="50" width="50">

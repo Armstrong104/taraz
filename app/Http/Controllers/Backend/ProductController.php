@@ -23,7 +23,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
+        $categories = Category::where('status',1)->select('name','id')->get();
         return view('backend.product.create',compact('categories'));
     }
 
@@ -32,6 +32,11 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+
+        // Product::storeProduct($request);
+
+        // return back()->with('message','Product Added Successfully!');
+
         $request->validate([
             'category_id' => 'required',
             'name' => 'required | max:250',
