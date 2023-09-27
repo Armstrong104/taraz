@@ -96,6 +96,8 @@ class ProductController extends Controller
             $imgName = 'product-image'.time().rand().'.'.$image->extension();
             $image->move($path,$imgName);
             $imgUrl = $path.$imgName;
+        }else{
+            $imgUrl=$product->image;
         }
 
         $product->update([
